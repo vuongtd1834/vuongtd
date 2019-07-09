@@ -1,0 +1,41 @@
+.number-input-design {
+  position: relative;
+  display: table;
+  .cell-tb {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .input-text {
+    &:hover ~ .icon1, &:focus ~ .icon1{
+      display: block;
+    }
+    &:hover ~ .icon2, &:focus ~ .icon2{
+      display: block;
+    }
+  }
+  .number-input {
+    position: relative;
+    .icon1 {
+      display: none;
+      position: absolute;
+      top: 7px;
+      left: 87%;
+      color: #9c9c9c;
+      cursor: pointer;
+      &:hover {
+        display: block;
+      }
+    }
+    .icon2 {
+      display: none;
+      position: absolute;
+      top: 7px;
+      left: 87%;
+      color: #9c9c9c;
+      cursor: pointer;
+      &:hover {
+        display: block;
+      }
+    }
+  }
+}

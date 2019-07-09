@@ -1,0 +1,34 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+.loading-wheel {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  position: relative;
+
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 50%;
+
+  @include animation(spin 1s linear infinite);
+
+  &:after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -2px;
+    left: 0px;
+    border-width: 2px;
+    border-color: rgba(0,0,0,.8) transparent transparent transparent;
+    border-style: solid;
+    border-radius: 50%;
+  }
+}
+@keyframes spin {
+  0% {
+    @include rotate(0deg);
+  }
+  100% {
+    @include rotate(360deg);
+  }
+}

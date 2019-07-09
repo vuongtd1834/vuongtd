@@ -1,0 +1,28 @@
+@import '../../styles/mixins';
+
+.inline-text-edit{
+  position: relative;
+  min-height: 34px;
+  & > div:first-child{
+    width: calc(100% - 48px);
+    left: 0;
+  }
+  &.editable{
+    background: transparent;
+    & > div:first-child{
+      top: -3px;
+    }
+    .editable-input-field{
+      max-height: 120px;
+      .form-control{
+        min-height: 30px;
+        max-height: 120px;
+        padding: 1px 4px;
+      }
+    }
+  }
+  button{
+    position: absolute;
+    right: 0;
+  }
+}

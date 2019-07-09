@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@import 'variables';
+@import 'mixins';
+
+/*-------------------------------G L O B A L------------------------------------*/
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'lightbox';
+@import 'bootstrap-custom';
+@import "convention_styles";
+@import 'global';

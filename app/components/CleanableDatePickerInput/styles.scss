@@ -1,0 +1,26 @@
+.cleanable-day-picker-input {
+
+  .DayPickerInput {
+    width: 100%;
+  }
+
+  .DayPickerInput:focus+.remove-icon {
+    display: block;
+  }
+
+  .DayPickerInput:hover+.remove-icon,
+  .remove-icon:hover {
+    display: block;
+  }
+
+  .remove-icon {
+    display: none;
+    color: #a1a1a1;
+    cursor: pointer;
+    right: 0;
+    z-index: 99;
+    float: right;
+    margin-top: -25px;
+    margin-right: 2px;
+  }
+}

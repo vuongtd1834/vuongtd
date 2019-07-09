@@ -1,0 +1,37 @@
+.input-clear-text {
+  position: relative;
+  margin-bottom: 0;
+
+  &.form-group {
+    margin-bottom: 0;
+  }
+
+  .input-text:focus + .remove-icon {
+    display: block;
+  }
+
+  .input-text:hover + .remove-icon,
+  .remove-icon:hover {
+    display: block;
+  }
+  .remove-icon {
+    display: none;
+    position: absolute;
+    color: rgb(161, 161, 161);
+    cursor: pointer;
+    right: 5px;
+    z-index: 99;
+    top: 16px;
+    transform: translateY(-50%);
+  }
+  //if IE9
+  .remove-icon {
+    top: 7px \0/IE9;
+  }
+  //if IE10 11
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .remove-icon {
+      top: 16px;
+    }
+  }
+}

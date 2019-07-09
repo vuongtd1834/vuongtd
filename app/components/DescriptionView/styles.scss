@@ -1,0 +1,17 @@
+.tooltip.description-view{
+  background: red
+}
+.ellipsis-html{
+  a {
+    float: right;
+  }
+  &.allow-show-all{
+    .LinesEllipsis-ellipsis{
+      display: none;
+    }
+  }
+  &.force-wrap .LinesEllipsis{
+      white-space: pre-wrap;
+      word-break: break-all;
+  }
+}

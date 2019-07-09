@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+// $font-family: "ＭＳ Ｐゴシック", "MS PGothic","メイリオ", Meiryo, Osaka, sans-serif;
+$font-family: sans-serif;
+//$body-background: url(../images/bodyBg.gif) #fff;
+$body-background: #fff;
+// $container-background: #F3FBFA;
+$container-background: rgb(245, 245, 245);
+$default-text-color: #000;
+// $body-background: #ffffff;
+
+//primary color
+$primaryColor0: #ffffff;
+$primaryColor1: #ff0000;
+$primaryColor2: #0070c0;
+$primaryColor3: #fff2cc;
+$primaryColor4: #ffc000;
+$primaryColor5: #d9d9d9;
+$primaryColor6: #fff8e5;
+$primaryColor7: #fdf2ea;
+$primaryColor8: #dae3f3;
+$primaryColor9: #e5e2c3;
+$primaryColor10: green;
+$primaryColor11: #e2efda;
+$primaryColor12: #f4b183;
+$primaryColor13: #FCE4D6;
+
+
+// ------------ BOOTSTRAP CUSTOM ------------
+
+$brand-primary: #1C2C61;
+// $brand-info:
+// $brand-success:
+// $brand-warning: #fbe5d6;
+$brand-danger: #b81a05;
+$brand-disabled: #828282;
+$brand-reset: rgb(83, 80, 80);
+
+
+//== Buttons
+//
+
+$btn-primary-bg: transparent;
+$btn-primary-border: transparent;
+
+$btn-danger-bg: transparent;
+$btn-danger-border: transparent;
+
+$btn-default-color: #fff;
+$btn-default-bg: rgb(128, 128, 128);
+$btn-default-border: #000;
+
+
+// Bootstrap styles
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";

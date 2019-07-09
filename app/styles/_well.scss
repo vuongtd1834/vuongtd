@@ -1,0 +1,9 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+.well{
+  background-color: #F9EABB !important;
+  border-color: #808080 !important;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6) !important;
+}

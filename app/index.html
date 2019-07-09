@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="jp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+
+  <meta name="viewport" content="width=1024">
+
+  <title>vuongtd</title>
+  <script type="text/javascript">
+    var ie = window.navigator.userAgent
+    if (ie.indexOf("MSIE ") !== -1 && ie.indexOf("9.0;") !== -1) {
+      if (!window.console) {
+        window.console = {
+          log: function () {},
+          debug: function () {},
+          info: function () {},
+          warn: function () {},
+          error: function () {}
+        };
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <noscript>Javascript</noscript>
+  <div id="app"></div>
+  <div id="no-support" style="display: none;">
+    <div style="
+        width: 968px;
+        margin: 0 auto;
+        font-size: 14px;
+        background: whitesmoke;
+        padding: 40px;
+        -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+        filter: progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=0, strength=3, enabled=true), progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=90, strength=3, enabled=true), progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=180, strength=3, enabled=true), progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=270, strength=3, enabled=true);
+      ">
+      <div style="
+          background-color: #fff;
+          padding-bottom: 10px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+          text-align: center;
+          filter: progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=0, strength=3, enabled=true), progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=90, strength=3, enabled=true), progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=180, strength=3, enabled=true), progid:DXImageTransform.Microsoft.Shadow(color=#aaaaaa, direction=270, strength=3, enabled=true);
+          ">
+        <div style="
+              padding: 10px 40px;
+              background-color: #f2dede;
+              border-color: #ebccd1;
+              color: #a94442;
+            ">
+          サポートされていないバージョンのブラウザを使用しているため、このサービスはご利用いただけません。
+          <br />
+          最新のブラウザをご利用ください。
+        </div>
+        <button onClick="javascript: window.close();" style="
+            margin: 10px 0;
+            color: #fff;
+            background-color: gray;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid #000;
+            white-space: nowrap;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          ">
+          閉じる
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  // Get IE or Edge browser version
+  var version = detectIE();
+
+  if (version === false) {
+
+  } else if (version <= 8) {
+    var body = document.getElementsByTagName('body')[0]
+    body.style.fontFamily = 'sans-serif';
+//    body.style.background = 'url(/mpf-cc/assets/images/bodyBg.gif) #fff';
+    body.style.color = '#000';
+    document.getElementById('no-support').style.display = 'block';
+    removeScripts()
+  }
+
+  /**
+   * detect IE
+   * returns version of IE or false, if browser is not Internet Explorer
+   */
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    // Test values; Uncomment to check result …
+
+    // IE 10
+    // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+    // IE 11
+    // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+    // Edge 12 (Spartan)
+    // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+    // Edge 13
+    // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf('rv:');
+      return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+      // Edge (IE 12+) => return version number
+      return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+
+    // other browser
+    return false;
+  }
+
+  function removeScripts() {
+    var scripts = document.body.getElementsByTagName('script');
+    var i = scripts.length;
+    while (i--) {
+      scripts[i].parentNode.removeChild(scripts[i]);
+    }
+  }
+</script>
+
+</html>

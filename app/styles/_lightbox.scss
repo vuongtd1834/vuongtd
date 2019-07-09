@@ -1,0 +1,15 @@
+#lightboxBackdrop{
+  svg{
+    fill: #FFF !important;
+  }
+  figcaption {
+    max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.4;        /* fallback */
+    height: 1.4*2em;       /* fallback */
+  }
+}

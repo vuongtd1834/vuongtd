@@ -1,0 +1,375 @@
+//display
+:global(.dpilb) {
+  display: inline-block;
+}
+
+:global(.dptable) {
+  display: table;
+}
+
+:global(.dptcell) {
+  display: table-cell;
+}
+
+//position
+:global(.psrelative) {
+  position: relative;
+}
+
+//width
+@mixin widthPercent($w) {
+  $width: percentage($w/100);
+  :global(.w#{$w}p) {
+    width: $width !important;
+  }
+}
+
+@include widthPercent(5);
+@include widthPercent(10);
+@include widthPercent(12);
+@include widthPercent(15);
+@include widthPercent(20);
+@include widthPercent(25);
+@include widthPercent(30);
+@include widthPercent(35);
+@include widthPercent(40);
+@include widthPercent(45);
+@include widthPercent(50);
+@include widthPercent(55);
+@include widthPercent(60);
+@include widthPercent(65);
+@include widthPercent(70);
+@include widthPercent(75);
+@include widthPercent(80);
+@include widthPercent(85);
+@include widthPercent(90);
+@include widthPercent(95);
+@include widthPercent(100);
+
+@mixin widthPixel($w) {
+  :global(.w#{$w}px) {
+    width: #{$w}px !important;
+  }
+}
+
+@include widthPixel(5);
+@include widthPixel(10);
+@include widthPixel(15);
+@include widthPixel(20);
+@include widthPixel(25);
+@include widthPixel(30);
+@include widthPixel(35);
+@include widthPixel(40);
+@include widthPixel(45);
+@include widthPixel(50);
+@include widthPixel(55);
+@include widthPixel(60);
+@include widthPixel(65);
+@include widthPixel(70);
+@include widthPixel(75);
+@include widthPixel(80);
+@include widthPixel(85);
+@include widthPixel(90);
+@include widthPixel(95);
+@include widthPixel(100);
+
+//height
+@mixin heightPixel($h) {
+  :global(.h#{$h}px) {
+    height: #{$h}px;
+  }
+}
+
+@include heightPixel(5);
+@include heightPixel(10);
+@include heightPixel(15);
+@include heightPixel(20);
+@include heightPixel(25);
+@include heightPixel(30);
+@include heightPixel(35);
+@include heightPixel(40);
+@include heightPixel(45);
+@include heightPixel(50);
+@include heightPixel(55);
+@include heightPixel(60);
+@include heightPixel(65);
+@include heightPixel(70);
+@include heightPixel(75);
+@include heightPixel(80);
+@include heightPixel(85);
+@include heightPixel(90);
+@include heightPixel(95);
+@include heightPixel(100);
+
+//margin
+@mixin margin($mg) {
+  :global(.mg#{$mg}) {
+    margin: #{$mg}px;
+  }
+}
+
+@include margin(5);
+@include margin(10);
+@include margin(15);
+@include margin(20);
+@include margin(25);
+@include margin(30);
+@include margin(35);
+@include margin(40);
+@include margin(45);
+@include margin(50);
+@include margin(75);
+@include margin(100);
+
+//margin orient
+$sideMap: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left
+);
+@mixin marginSide($side, $mg) {
+  :global(.mg#{$side}#{$mg}) {
+    margin-#{map_get($sideMap, $side)}: #{$mg}px;
+  }
+}
+
+@include marginSide(t, 0);
+@include marginSide(t, 2);
+@include marginSide(t, 5);
+@include marginSide(t, 10);
+@include marginSide(t, 15);
+@include marginSide(t, 20);
+@include marginSide(t, 25);
+@include marginSide(t, 30);
+@include marginSide(t, 35);
+@include marginSide(t, 40);
+@include marginSide(t, 45);
+@include marginSide(t, 50);
+@include marginSide(t, 75);
+@include marginSide(t, 100);
+
+@include marginSide(r, 0);
+@include marginSide(r, 5);
+@include marginSide(r, 10);
+@include marginSide(r, 15);
+@include marginSide(r, 20);
+@include marginSide(r, 25);
+@include marginSide(r, 30);
+@include marginSide(r, 35);
+@include marginSide(r, 40);
+@include marginSide(r, 45);
+@include marginSide(r, 50);
+@include marginSide(r, 55);
+@include marginSide(r, 75);
+@include marginSide(r, 80);
+@include marginSide(r, 100);
+
+@include marginSide(b, 0);
+@include marginSide(b, 2);
+@include marginSide(b, 5);
+@include marginSide(b, 10);
+@include marginSide(b, 15);
+@include marginSide(b, 20);
+@include marginSide(b, 25);
+@include marginSide(b, 30);
+@include marginSide(b, 35);
+@include marginSide(b, 40);
+@include marginSide(b, 45);
+@include marginSide(b, 50);
+@include marginSide(b, 75);
+@include marginSide(b, 100);
+
+@include marginSide(l, 0);
+@include marginSide(l, 5);
+@include marginSide(l, 10);
+@include marginSide(l, 15);
+@include marginSide(l, 20);
+@include marginSide(l, 25);
+@include marginSide(l, 30);
+@include marginSide(l, 35);
+@include marginSide(l, 40);
+@include marginSide(l, 45);
+@include marginSide(l, 50);
+@include marginSide(l, 75);
+@include marginSide(l, 100);
+
+//padding
+@mixin padding($mg) {
+  :global(.pd#{$mg}) {
+    padding: #{$mg}px;
+  }
+}
+
+@include padding(2);
+@include padding(5);
+@include padding(8);
+@include padding(10);
+@include padding(15);
+@include padding(20);
+@include padding(25);
+@include padding(30);
+@include padding(35);
+@include padding(40);
+@include padding(45);
+@include padding(50);
+@include padding(75);
+@include padding(100);
+
+//padding orient
+@mixin paddingSide($side, $mg) {
+  :global(.pd#{$side}#{$mg}) {
+    padding-#{map_get($sideMap, $side)}: #{$mg}px !important;
+  }
+}
+
+@include paddingSide(t, 0);
+@include paddingSide(t, 2);
+@include paddingSide(t, 5);
+@include paddingSide(t, 10);
+@include paddingSide(t, 15);
+@include paddingSide(t, 20);
+@include paddingSide(t, 25);
+@include paddingSide(t, 30);
+@include paddingSide(t, 35);
+@include paddingSide(t, 40);
+@include paddingSide(t, 45);
+@include paddingSide(t, 50);
+@include paddingSide(t, 75);
+@include paddingSide(t, 100);
+
+@include paddingSide(r, 0);
+@include paddingSide(r, 2);
+@include paddingSide(r, 5);
+@include paddingSide(r, 10);
+@include paddingSide(r, 15);
+@include paddingSide(r, 20);
+@include paddingSide(r, 25);
+@include paddingSide(r, 30);
+@include paddingSide(r, 35);
+@include paddingSide(r, 40);
+@include paddingSide(r, 45);
+@include paddingSide(r, 50);
+@include paddingSide(r, 75);
+@include paddingSide(r, 100);
+
+@include paddingSide(b, 0);
+@include paddingSide(b, 2);
+@include paddingSide(b, 5);
+@include paddingSide(b, 10);
+@include paddingSide(b, 15);
+@include paddingSide(b, 20);
+@include paddingSide(b, 25);
+@include paddingSide(b, 30);
+@include paddingSide(b, 35);
+@include paddingSide(b, 40);
+@include paddingSide(b, 45);
+@include paddingSide(b, 50);
+@include paddingSide(b, 75);
+@include paddingSide(b, 100);
+
+@include paddingSide(l, 0);
+@include paddingSide(l, 2);
+@include paddingSide(l, 5);
+@include paddingSide(l, 10);
+@include paddingSide(l, 15);
+@include paddingSide(l, 20);
+@include paddingSide(l, 25);
+@include paddingSide(l, 30);
+@include paddingSide(l, 35);
+@include paddingSide(l, 40);
+@include paddingSide(l, 45);
+@include paddingSide(l, 50);
+@include paddingSide(l, 75);
+@include paddingSide(l, 100);
+
+
+//max-width
+@mixin maxWidthPixel($w) {
+  :global(.mw#{$w}px) {
+    max-width: #{$w}px !important;
+  }
+}
+
+@include maxWidthPixel(5);
+@include maxWidthPixel(10);
+@include maxWidthPixel(15);
+@include maxWidthPixel(20);
+@include maxWidthPixel(25);
+@include maxWidthPixel(30);
+@include maxWidthPixel(35);
+@include maxWidthPixel(40);
+@include maxWidthPixel(45);
+@include maxWidthPixel(50);
+@include maxWidthPixel(55);
+@include maxWidthPixel(60);
+@include maxWidthPixel(65);
+@include maxWidthPixel(70);
+@include maxWidthPixel(75);
+@include maxWidthPixel(80);
+@include maxWidthPixel(85);
+@include maxWidthPixel(90);
+@include maxWidthPixel(95);
+@include maxWidthPixel(100);
+
+//text align
+:global(.tac) {
+  text-align: center;
+}
+
+:global(.tal) {
+  text-align: left;
+}
+
+:global(.tar) {
+  text-align: right;
+}
+
+//align
+:global(.vam) {
+  vertical-align: middle;
+}
+
+:global(.vat) {
+  vertical-align: top;
+}
+
+//text style
+:global(.textbold) {
+  font-weight: bold;
+}
+
+:global(.textitalic) {
+  font-style: italic;
+}
+
+//divider
+:global(.divider) {
+  background-color: #000000;
+  height: 1px;
+}
+
+//float
+:global(.float-right) {
+  float: right;
+}
+
+:global(.float-left) {
+  float: left;
+}
+.DayPicker{
+  .DayPicker_weekHeaders{
+    .DayPicker_weekHeader{
+      ul{
+        li{
+          &:first-child{
+            color: red;
+          }
+          &:last-child{
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+}

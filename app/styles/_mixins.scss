@@ -1,0 +1,20 @@
+@import "mixins/flex";
+@import "mixins/box";
+
+//table mixins
+@mixin table-bd($size, $color, $padding) {
+  border-collapse: collapse;
+  > tbody > tr > td {
+    border: #{$size}px solid $color;
+    padding: $padding;
+    line-height: 1.5;
+  }
+}
+
+@mixin table-header($bgColor, $align) {
+  > td {
+    background-color: $bgColor;
+    text-align: $align;
+    font-weight: bold;
+  }
+}

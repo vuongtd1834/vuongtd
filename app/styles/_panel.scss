@@ -1,0 +1,123 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+.panel{
+  &.panel-form{
+    border-color: #808080;
+    background-color: #F9EABB;
+    padding: 15px;
+    .panel-heading{
+      padding: 0 0 5px;
+      font-weight: bold;
+      border-color: transparent;
+      background-color: transparent;
+    }
+    .table{
+       border: 1px solid #808080;
+       .media-logo{
+         height: 18px;
+       }
+       td:not(.row-header){
+         background-color: #ddebf3;
+       }
+       td.row-blank{
+         background-color: #ffffff;
+       }
+    }
+  }
+  &.panel-collapse{
+    @include box-shadow(none);
+    .panel-heading{
+      padding: 10px 15px;
+      position: relative;
+      background-color: transparent !important;
+      a {
+        padding-left: 20px;
+        text-decoration: none;
+        display: block;
+        &:before{
+         font-family: 'Glyphicons Halflings';
+         // content: "\2212";
+         content: "\e082";
+         position: absolute;
+         left: 10px;
+         top: 14px;
+         line-height: 1;
+       }
+       &.collapsed:before {
+         // content: "\002b";
+         content: "\e081";
+       }
+     }
+    }
+  }
+  &.panel-agreement{
+    @include box-shadow(none);
+    background-color: transparent;
+    .panel-heading{
+      padding: 0 0 5px;
+      font-weight: bold;
+    }
+    .panel-body{
+      border: 1px solid #f2f2f2;
+      height: 300px;
+      overflow: auto;
+      background: #fff;
+    }
+    .panel-footer{
+      text-align: center;
+      background-color: transparent;
+      padding: 0;
+      border-top: 0;
+    }
+  }
+  &.panel-search{
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #FCE7CD;
+    border: 1px solid #bfbfbf;
+    @include box-shadow(0 0 6px 0px rgba(0,0,0,.25));
+    .panel-heading, .panel-body, .table{
+      background: #fff;
+    }
+    .table{
+      td{
+        border-color: transparent;
+      }
+    }
+    .panel-footer{
+      margin-top: 1em;
+      border: 0;
+      padding-bottom: 0;
+      // background: #fff;
+      background: transparent;
+      .btn-danger{
+        width: 200px;
+      }
+    }
+  }
+  &.panel-sidebar{
+    border: none;
+    background: transparent;
+    .panel-heading{
+      background-color: #fff;
+      border: none;
+      border-left: 5px solid rgb(237, 135, 49);
+      margin-bottom: 10px;
+    }
+    .panel-body{
+      background-color: #fff;
+      border: none;
+      dd{
+        color: #444;
+        padding-left: 14px;
+      }
+    }
+  }
+  .panel-heading{
+    position: relative;
+    .pull-right{
+      top: 4px; right: 6px;
+      position: absolute;
+    }
+  }
+}

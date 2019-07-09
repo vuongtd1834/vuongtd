@@ -1,0 +1,41 @@
+export default [{
+  id: 1,
+  prefectureName: '北海道',
+  name: '日本橋店'
+}, {
+  id: 2,
+  prefectureName: '北海道',
+  name: '東京駅前店'
+}, {
+  id: 3,
+  prefectureName: '北海道',
+  name: '南行徳駅前店'
+}, {
+  id: 4,
+  prefectureName: '北海道',
+  name: '大手町店'
+}, {
+  id: 5,
+  prefectureName: '北海道',
+  name: '門前仲町店'
+}, {
+  id: 6,
+  prefectureName: '北海道',
+  name: '西葛西店'
+}, {
+  id: 7,
+  prefectureName: '北海道',
+  name: '葛西店'
+}, {
+  id: 8,
+  prefectureName: '北海道',
+  name: '浦安店'
+}, {
+  id: 9,
+  prefectureName: '北海道',
+  name: '桜木町店'
+}, {
+  id: 10,
+  prefectureName: '北海道',
+  name: '千葉駅前店'
+}]

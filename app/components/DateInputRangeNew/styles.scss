@@ -1,0 +1,180 @@
+.input-date-range{
+  position: relative;
+  display: inline-block;
+  .btn-remove{
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
+    font-size: .8em;
+    color: #999;
+    text-align: center;
+    width: 20px; height: 20px; line-height: 20px;
+    z-index: 9;
+    &-from{
+      left: 110px;
+    }
+    &-to{
+      right: 33px;
+    }
+    &:hover{
+      color: #666
+    }
+  }
+  input{
+    -webkit-box-shadow: inset 1px 2px 6px -2px rgba(0, 0, 0, 0.375);
+    box-shadow: inset 1px 2px 6px -2px rgba(0, 0, 0, 0.375);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .CalendarMonth_table{
+    border-collapse: separate;
+    border-spacing: 0 .6em;
+  }
+  .DateRangePicker{
+    z-index: 9;
+    .DayPicker_focusRegion {
+      padding-bottom: 20px;
+      .DayPicker_transitionContainer {
+        padding-bottom: 20px;
+      }
+    }
+    .CalendarMonth_table {
+      td {
+        border-color: transparent !important
+      }
+    }
+    .DateRangePickerInput{
+      background-color: transparent;
+      &_calendarIcon{
+        padding: 6px 10px;
+        margin: 0;
+      }
+    }
+    .DateInput{
+      width: 120px;
+      &_input{
+        font-size: 1em;
+        line-height: inherit;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+      }
+      ::-ms-clear {
+        display: none;
+      }
+
+    }
+    .DateRangePickerInput_arrow{
+      position: relative;
+      text-indent: -99999px;
+      width: 20px;
+      &::after{
+        position: absolute;
+        content: '～';
+        top: 0; left: 3px;
+        text-indent: 0px;
+      }
+    }
+    .CalendarMonth_table{
+      border-collapse: separate;
+      border-spacing: 0 0.25em;
+      td{
+        border-bottom-color: transparent;
+      }
+    }
+    .CalendarDay{
+      position: relative;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 27px;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border: 2px solid transparent;
+      }
+      span{
+        z-index: 3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        line-height: 28.5px;
+      }
+      &__default{
+        &:hover{
+          background-color: transparent;
+          border-color: transparent;
+          &:not(.CalendarDay__blocked_out_of_range):after{
+            border-radius: 100%;
+            border-color: #4285f4;
+          }
+        }
+      }
+      &__hovered{
+        &_span{
+          background-color: #DBEBFD;
+          color: #484848;
+          &:hover{
+            background-color: #DBEBFD;
+            color: #484848;
+            border-top-left-radius: 0 !important;
+            border-top-right-radius: 100% !important;
+            border-bottom-right-radius: 100% !important;
+            border-bottom-left-radius: 0 !important;
+            &:after{
+              background-color: #FFF;
+            }
+          }
+        }
+      }
+      &__selected{
+        background-color: #FFF;
+        &:after{
+          border-radius: 100%;
+          background-color: #4285f4;
+        }
+        &_start, &_end{
+          background-color: #DBEBFD !important;
+          color: #FFF !important;
+          &:hover{
+            background-color: #DBEBFD;
+            color: #484848 !important;
+            &:after{
+              background-color: #FFF;
+            }
+          }
+        }
+        &_start,
+        &_start:hover{
+          border-top-left-radius: 100% !important;
+          border-top-right-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+          border-bottom-left-radius: 100% !important;
+        }
+        &_end,
+        &_end:hover{
+          border-top-left-radius: 0 !important;
+          border-top-right-radius: 100% !important;
+          border-bottom-right-radius: 100% !important;
+          border-bottom-left-radius: 0 !important;
+        }
+        &_span{
+          background-color: #DBEBFD;
+          color: #484848;
+          &:hover{
+            background-color: #DBEBFD;
+            color: #484848;
+            &:after{
+              background-color: #FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.InputFromTo {
+  position: relative;
+
+  .date-input {
+    width: 35%;
+    display: inline-block;
+  }
+
+  .DayPickerInput-OverlayWrapper {
+    position: absolute;
+    left: 0;
+
+    .DayPickerInput-Overlay {
+      width: 440px;
+      z-index: 10;
+      position: absolute;
+      left: 0;
+
+      .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+        background-color: #f0f8ff !important;
+        color: #4a90e2;
+      }
+
+      .DayPicker-Day {
+        border-radius: 0 !important;
+      }
+
+      .DayPicker-Caption > div{
+        font-size: 1.6rem;
+      }
+
+      .DayPicker-Day--start {
+        border-top-left-radius: 50% !important;
+        border-bottom-left-radius: 50% !important;
+      }
+
+      .DayPicker-Day--end {
+        border-top-right-radius: 50% !important;
+        border-bottom-right-radius: 50% !important;
+      }
+    }
+  }
+  .date-input-design {
+    display: table;
+    .cell-tb {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.line-text-format-chrome {
+  display: block; /* Fallback for non-webkit */
+  height: 95px; /* Fallback for non-webkit */
+  white-space: pre-wrap;
+  word-break: break-all;
+  // font-size: 15px;
+  // line-height: 2px;
+  font-family: sans-serif !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+.show-view{
+  white-space: pre;
+}
+// .format-show-text {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   word-break: break-all;
+//   width: 337px;
+// }

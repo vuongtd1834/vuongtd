@@ -1,0 +1,22 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+#root-container {
+  padding-bottom: 100px;
+  .notification-bar {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 6px 0;
+    text-align: center;
+    font-weight: bold;
+    @include box-shadow(0 0px 6px rgba(0,0,0,.5));
+    a{
+      display: inline-block;
+      margin-left: 10px;
+      color: #ff0000;
+      text-decoration: underline;
+    }
+  }
+  &.hide-top-panel{
+    padding-top: 40px;
+  }
+}
