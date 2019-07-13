@@ -3,13 +3,13 @@ import {Switch, Route} from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
 import {goBack, push} from 'connected-react-router'
 
-import Test from 'containers/Test/Loadable'
-
 import './styles'
+
+import NavBar from '../../components/NavBar'
+import Test from '../Test'
 
 // Redux
 import {connect} from 'react-redux'
-import {fromLong} from 'ip';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     const test = (
       <Switch>
-        <Route exact path="/" component={Test} />
+        <Route exact path="/home" component={Test} />
       </Switch>
     )
 
@@ -34,6 +34,7 @@ class App extends React.Component {
 
     return (
       <div id='root-container'>
+        <NavBar/>
         {getRoute()}
       </div>
     )

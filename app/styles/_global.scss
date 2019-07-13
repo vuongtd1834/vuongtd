@@ -9,10 +9,10 @@ body {
 }
 
 .container {
-  width: 968px !important;
-  background: $container-background;
-  padding: 0 10px 1.65rem;
-  @include box-shadow(0 1px 10px rgba(0, 0, 0, .6));
+  //width: 968px !important;
+  //background: $container-background;
+  //padding: 0 10px 1.65rem;
+  //@include box-shadow(0 1px 10px rgba(0, 0, 0, .6));
 }
 
 //hide clear button on IE
@@ -339,5 +339,12 @@ input:-moz-placeholder {
 .modal-open {
   .icon-search-glass {
     left: -20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
   }
 }

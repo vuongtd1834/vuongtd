@@ -11,6 +11,10 @@
   display: table-cell;
 }
 
+:global(.dpn) {
+  display: none;
+}
+
 //position
 :global(.psrelative) {
   position: relative;

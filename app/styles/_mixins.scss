@@ -18,3 +18,37 @@
     font-weight: bold;
   }
 }
+
+@mixin beauty-link() {
+  color: blue;
+  background-color: green;
+  &:hover {
+    color: red;
+  }
+}
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 480px;
+$tablet-width: 768px;
+$tablet-second-width: 922px;
+$desktop-width: 1024px;
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-second { @media (min-width: #{$tablet-second-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
