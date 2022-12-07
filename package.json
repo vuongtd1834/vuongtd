@@ -218,7 +218,7 @@
     "cross-env": "5.0.0",
     "crypto-js": "^3.1.9-1",
     "detect-browser": "^3.0.1",
-    "express": "4.15.3",
+    "express": "4.17.3",
     "history": "4.6.3",
     "hoist-non-react-statics": "2.1.1",
     "invariant": "2.2.2",
